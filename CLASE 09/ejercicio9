@@ -1,0 +1,14 @@
+// Define una constante PI con el valor de pi (3.14159). Pide al usuario
+// que ingrese el radio de un círculo y calcula su área y perímetro
+// utilizando la constante PI.
+
+const prompt = require('prompt-sync')();
+
+let PI = 3.14159;
+let radio = parseFloat(prompt("Ingrese el radio del círuclo a calcular(en cm): "));
+
+let resultadoArea= (PI * Math.pow(radio,2)).toFixed(2);
+let resultadoPerimetro = (2*PI*radio).toFixed(2);
+
+console.log("El radio ingresado es " + radio + "cm por lo que el área sería de " + 
+resultadoArea + "cm2 y el perímetro es de " + resultadoPerimetro + "cm.")

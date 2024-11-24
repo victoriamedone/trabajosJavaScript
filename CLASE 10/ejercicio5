@@ -1,0 +1,23 @@
+// Declaración y Asignación de Variables:
+// 1. Declara dos variables y asígnales valores numéricos de tu
+// elección.
+
+let n1 = 3;
+let n2 = 12; 
+
+// Operadores de Comparación y Lógicos:
+// 2. Utiliza los operadores > (mayor que) y && (y lógico) para
+// verificar si ambos números son mayores que 10.
+// Mostrar Resultado en la Consola:
+// 3. Utiliza console.log() para mostrar el resultado de la
+// comparación.
+
+if(n1 > 10 && n2 > 10){
+    console.log("Ambos numeros son mayores a 10");
+}else if(n1 <10 && n2 >10){
+    console.log("Solo el segundo numero es mayor a 10");
+}else if(n1 >10 && n2 <10){
+    console.log("Solo el primer numero es mayor a 10");
+}else{
+    console.log("Ambos numeros son menores a 10")
+}

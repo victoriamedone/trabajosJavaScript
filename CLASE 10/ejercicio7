@@ -1,0 +1,11 @@
+// Escribe un programa que
+// convierta una temperatura dada en grados Celsius a grados Fahrenheit.
+// La fórmula de conversión es:
+// Pide al usuario que ingrese la temperatura en Celsius y muestra el
+// resultado en Fahrenheit.
+
+let celsius = 12;
+
+let fahrenheit = celsius * 9 / 5 + 32;
+
+console.log("La temperatura en Celsius es " + celsius + "ºC y en Fareheit es " + fahrenheit + "F." );

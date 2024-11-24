@@ -1,0 +1,28 @@
+// Crea un programa que le pida al usuario dos números y una operación
+// matemática a realizar: suma, resta, multiplicación o división. Según la operación
+// ingresada, el programa deberá calcular y mostrar el resultado. Si el usuario
+// ingresa una operación inválida, el programa debe mostrar un mensaje de error.
+// Usa switch para resolverlo.
+
+const prompt = require('prompt-sync')();
+
+let num1 = parseInt(prompt("Ingrese un numero: "));
+let num2 = parseInt(prompt("Ingrese otro numero: "));
+let operacion = parseInt(prompt("Ingrese (el numero de) la operación a realizar (1)suma (2)resta (3)multiplicación (4)división: "));
+
+switch(operacion){
+    case 1 : console.log(num1+num2)
+    break;
+
+    case 2: console.log(num1-num2)
+    break;
+
+    case 3 : console.log(num1*num2)
+    break;
+
+    case 4 : console.log(num1/num2)
+    break;
+
+    default : console.log("Ingrese datos válidos por favor.")
+    break;
+}

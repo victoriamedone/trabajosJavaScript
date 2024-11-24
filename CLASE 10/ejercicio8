@@ -1,0 +1,10 @@
+// Pide al usuario que ingrese su peso y su altura, y muestra el IMC
+// calculado.
+
+let altura = 1.70;
+let peso = 70; 
+
+let imc = parseFloat(peso / (altura * altura))
+
+console.log("Tu altura es " + altura + "mts y pesas " + peso + 
+"kg, por lo que tu Indice de Masa Corporal es: " + imc + ".");

@@ -1,0 +1,21 @@
+// Pide al usuario que ingrese las longitudes de los tres lados de un
+// triángulo. Determina y muestra si el triángulo es equilátero, isósceles o
+// escaleno. (Investiga sobre los triángulos para determinar la formula)
+
+const prompt = require('prompt-sync')();
+
+
+console.log("¡Vamos a ver qué tipo de triángulo es!");
+
+let x1 = parseFloat(prompt("Ingrese el largo del lado del triangulo: "));
+let x2 = parseFloat(prompt("Ingrese el largo del otro lado del triangulo: "));
+let x3 = parseFloat(prompt("Ultima vez, ingrese el largo del ultimo lado del triangulo: "));
+
+if(x1 === x2 && x2 === x3){
+    console.log("Es un triángulo equilatero.");
+} else if (x1 != x2 && x2 != x3){
+    console.log("Es un triangulo escaleno.");
+}else{
+    console.log("Es un triángulo isóceles.");
+}
+

@@ -1,0 +1,20 @@
+// Escribe un programa que le pida al usuario dos números enteros (inicio y fin). El
+// programa debe mostrar todos los números pares que se encuentran entre esos
+// dos valores, incluyendo los límites si son pares. Utiliza un ciclo for para recorrer
+// los números entre el inicio y el fin. Si el número inicial es mayor que el final, el
+// programa debe mostrar un mensaje indicando que los valores son inválidos.
+
+const prompt = require('prompt-sync')();
+
+let n1 = parseInt(prompt("Ingrese un numero para que sea el inicio del rango: "));
+let n2 = parseInt(prompt("Ingrese un numero mayor para que sea el final: "));
+
+if(n1>n2){
+    console.log("Los valores son inválidos");
+}else{
+    for(let i=n1; i<=n2 ; i++){
+        if(i % 2 == 0){
+            console.log(i)
+        }
+    }
+};

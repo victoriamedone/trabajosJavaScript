@@ -1,0 +1,27 @@
+// Crea un programa donde la computadora seleccione un número al azar entre 1
+// y 10. Luego, pide al usuario que adivine el número hasta 3 intentos. Si el usuario
+// acierta en cualquiera de los intentos, muestra un mensaje de felicitación y detén
+// los intentos restantes. Si no acierta después de los 3 intentos, muestra el
+// número secreto. Usa un for para resolver este ejercicio.
+
+const prompt = require('prompt-sync')();
+
+console.log("La computadora acaba de generar un numero random entre 1 y 10, lo podés adivinar? ")
+
+let secreto = parseInt(Math. random() * (10 - 1) + 1);
+let acierto = false;
+
+for(i=0; acierto == false && i<3; i++){
+    let adivinar = parseInt(prompt("Intentá adivinar: "))
+
+    if(adivinar == secreto){
+        console.log("Felicitaciones! es correcto.");
+    }else if(i<3){
+        console.log("Error! intentá de nuevo. ");
+    }else{
+        console.log("Demasiados intentos, mejor suerte la proxima");
+    }
+}
+
+//El código ejecuta pero no logro que corte si adivino el numero.
+//aiuda
