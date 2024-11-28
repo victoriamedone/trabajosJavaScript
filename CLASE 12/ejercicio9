@@ -1,0 +1,76 @@
+// Se está realizando el desarrollo de una aplicación para control de
+// gastos. Cada día, el usuario ingresa sus gastos cotidianos.
+// La idea es solo registrar el total de los gastos, al finalizar la jornada.
+// Para simplificar, vamos a considerar que todos los meses tienen cuatro
+// semanas.
+// Los gastos estarán en una matriz de 4x7, cada fila representa una
+// semana y cada columna un día. Es decir, fila 0, semana 1, fila 1, semana
+// 2, etc. Columna 0, día 1, columna 1, día 2, etcétera.
+
+const prompt = require('prompt-sync')();
+
+let matriz =[
+    [1135, 2500, 900, 1600, 2800, 3650, 1100],
+    [1750, 1890, 1900, 1300, 898, 1750, 2800],
+    [1700, 1150, 1690, 1900, 1770, 4500, 2560],
+    [800, 1250, 1430, 2100, 1980, 1270, 950]
+];
+
+// a) Lo que nos solicitan es dar el total de gastos en una semana.
+// Recordemos que cada fila representa una semana, es decir, si nos
+// indican semana 2 tenemos que sumar la fila 1 de la matriz. Recordar
+// que las matrices comienzan siempre en posición 0.
+
+let sumaSemanal = [];
+
+let semana = parseInt(prompt("Ingrese la semana que quiere calcular (1-4): "));
+let fila = matriz[semana - 1]; //para ubicar la semana en el indice correcto de la matriz, sino la 1 sería 0.
+let total = 0;
+
+for (let i = 0; i < fila.length; i++) {
+    total += fila[i]; 
+}
+
+console.log("El total de gastos de la semana " + semana + " es: " + total + ".");
+
+// b) La aplicación también tendrá una parte de estadísticas, para esto
+// nos solicitan dar el total de un día en particular, por ejemplo del día
+// 3, acá también tengamos en cuenta lo que ocurre con las filas, ya
+// que las columnas también comienzan en 0.
+
+ let dia = parseInt(prompt("Ingrese el día (el mismo día cada semana) que quiere calcular (1-7): "));
+ let totalDiaEspecifico = 0;
+
+ for (let i = 0; i < matriz.length; i++) {
+    totalDiaEspecifico += matriz[i][dia - 1]; 
+}
+
+ console.log("El total de gastos de todos los días " + dia + " es: " + totalDiaEspecifico + ".");
+
+// c) Por último, es necesario tener el total de gastos realizados en el
+// mes.
+
+let sumaMensual = 0;
+
+for(i=0;i<matriz.length;i++){
+    for(j=0;j<matriz[i].length;j++){
+        sumaMensual += matriz[i][j]
+    }
+}
+
+console.log("El total de los gastos mensuales es: " + sumaMensual)
+
+// d) Obtener cuál fue la semana que más gastos se realizaron. Indicar el
+// día que más gastos se realizaron.
+
+let semanaMayorGasto= 0;
+let diaMayorGasto = 0;
+
+for(i=0;i<matriz.length;i++){
+    semanaMayorGasto += matriz[i]
+    for(j=0;j<matriz[i].length;j++){
+        diaMayorGasto += j
+    }
+}
+
+console.log("La semana con mayor gastos tiene un total de $" + semanaMayorGasto);

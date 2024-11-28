@@ -1,0 +1,16 @@
+// Crea un programa que solicite al usuario ingresar números continuamente
+// hasta que el usuario ingrese un número negativo. Luego, imprime la suma
+// de todos los números ingresados.
+
+const prompt = require('prompt-sync')();
+
+let suma = 0;
+let num = 0;
+
+
+while(num >= 0){
+    suma += num;
+    num = parseInt(prompt("Ingrese un número por favor (para terminar deberá ser negativo): "));
+}
+
+console.log("La suma de los numeros ingresados es: " + suma);
