@@ -1,0 +1,13 @@
+// Crea una función declarada llamada convertirHorasAMinutos que reciba
+// un número de horas como parámetro y devuelva el total en minutos.
+
+const prompt = require('prompt-sync')();
+
+let horas = parseFloat(prompt("Ingrese la cantidad de horas para convertir a minutos: "));
+
+function convertirHorasAMinutos(){
+    let minutos = horas*60
+    console.log(horas, " horas son ", minutos, " minutos.")
+}
+
+convertirHorasAMinutos()

@@ -1,0 +1,14 @@
+// Crea una función expresada llamada convertirCelsiusAFahrenheit que
+// reciba una temperatura en grados Celsius y devuelva la temperatura en
+// Fahrenheit.
+
+const prompt = require('prompt-sync')();
+
+let tempCelsius = parseFloat(prompt("Ingrese una la temperatura en Celsius: "));
+
+function convertirCelsiusAFahrenheit(){
+    let tempF = (tempCelsius * 9/5) + 32;
+    console.log("La temperatura " , tempCelsius , "ºC, pasada a Farenheit es: ", tempF , "F.");
+}
+
+convertirCelsiusAFahrenheit();

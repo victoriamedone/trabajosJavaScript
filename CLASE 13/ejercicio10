@@ -1,0 +1,19 @@
+// Crea una función expresada llamada calcularFactorial que reciba un
+// número y devuelva su factorial.
+
+const prompt = require('prompt-sync')();
+
+let numero = parseInt(prompt("Ingrese un numero para conseguir su factorial: "));
+
+function calcularFactorial(numero) {
+    let resultado = numero;
+    if (numero === 0 || numero === 1) 
+      return 1; 
+    while (numero > 1) { 
+      numero--;
+      resultado *= numero;
+    }
+    console.log("El factorial del numero es: ", resultado);
+}
+
+calcularFactorial(numero);

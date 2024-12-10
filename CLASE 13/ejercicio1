@@ -1,0 +1,17 @@
+// Crea una función declarada llamada calcularAreaTriangulo que reciba dos
+// parámetros: la base y la altura de un triángulo. La función debe devolver el
+// área del triángulo.
+
+const prompt = require('prompt-sync')();
+
+let altura = parseFloat(prompt("Ingrese la altura del triángulo (en cm): "));
+let base = parseFloat(prompt("Ingrese la base del triángulo (en cm): "));
+
+
+function calcularAreaTriangulo(){
+    let area = ((base * altura)/2)
+    console.log("El área del triángulo es: " , area)
+
+}
+
+calcularAreaTriangulo();

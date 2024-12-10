@@ -1,0 +1,17 @@
+// Crea una función expresada llamada encontrarMayor que reciba dos
+// números como parámetros y devuelva el número mayor.
+
+const prompt = require('prompt-sync')();
+
+let num1 = parseInt(prompt("Ingrese un numero: "));
+let num2 = parseInt(prompt("Ingrese otro numero: "));
+
+function encontrarMayor(){
+    if(num1 > num2){
+        console.log(" El mayor numero es: " , num1);
+    } else {
+        console.log(" El mayor numero es: " , num2);
+    }
+}
+
+encontrarMayor();
