@@ -1,0 +1,14 @@
+const prompt = require('prompt-sync')();
+
+// Dada la lista ['Me', 'gusta', 'aprender', 'JavaScript'], queremos construir una
+// frase completa concatenando cada palabra en orden, separadas por
+// espacios. Al final, deberíamos obtener el texto 'Me gusta aprender
+// JavaScript'.
+
+let listaFrase = ['Me', 'gusta', 'aprender', 'JavaScript'];
+
+const formarFrase = listaFrase.reduce(function(acum,letra){
+    return (acum + " " + letra)
+})
+
+console.log(formarFrase)
