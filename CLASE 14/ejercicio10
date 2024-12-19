@@ -1,0 +1,38 @@
+// Escribe un programa en JavaScript para contar cuántas veces el usuario
+// menciona sus flores favoritas. Realiza las siguientes acciones:
+// 1. Inicializa un array vacío para almacenar las flores favoritas.
+// 2. Pregunta al usuario por sus tres flores favoritas utilizando prompt y
+// agrega cada una al array manualmente (sin usar métodos como push).
+// 3. Pregunta al usuario por una flor específica y verifica si está entre sus
+// favoritas.
+// 4. Muestra por consola cuántas de las flores favoritas se mencionaron (esto
+// debe hacerse manualmente).
+
+const prompt = require('prompt-sync')();
+
+let floresFav = [];
+
+for(let i = 0; i <= 2; i++){
+    let flores = prompt(`Cual es tu flor favorita numero ${(i+1)}? `); 
+    floresFav[i] = flores;
+}
+
+console.log(floresFav);
+
+let florEspecifica = prompt("Cual es la flor que desea encontrar? "); 
+
+function encontrarFlor(nombreFlor){
+let contador = 0; 
+for(let i = 0; i <floresFav.length; i++){
+    if(nombreFlor == floresFav[i]){
+        contador++;
+    }
+}
+if(contador > 0){
+    console.log("Esa flor es de sus favoritas y aparece ",contador,"vez");
+} else {
+    console.log(`Esa flor no es de sus favoritas`); 
+  }
+}
+
+encontrarFlor(florEspecifica); 

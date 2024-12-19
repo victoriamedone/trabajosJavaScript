@@ -1,0 +1,15 @@
+const prompt = require('prompt-sync')();
+
+// Tienes una lista de comidas ["Pizza", "Hamburguesa", "Tacos"]. Verifica si
+// "Sushi" está en la lista y muestra un mensaje que confirme si está o no.
+
+let comidas = ["Pizza", "Hamburguesa", "Tacos"];
+
+let buscarSushi = comidas.includes("Sushi");
+
+if(buscarSushi === false){
+    console.log("Sushi no se encuentra en la lista.");
+}else if(buscarSushi === true){
+    console.log("Sushi se encuentra en la lista!");
+}
+

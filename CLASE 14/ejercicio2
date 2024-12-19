@@ -1,0 +1,22 @@
+// Solicita al usuario cinco calificaciones y usa una función flecha para calcular
+// el promedio.
+
+const prompt = require('prompt-sync')();
+
+const calcularPromedio = (notas) => {
+
+    const suma = notas.reduce((acumulador, nota) => acumulador + nota, 0);
+    console.log("El promedio es de: ", suma / notas.length);
+};
+
+let notas = [];
+
+for(i=5; i> 0; i--){
+    let nota = parseFloat(prompt("Ingrese una nota (faltan "+i+"): "));
+    notas.push(nota);
+}
+
+calcularPromedio(notas);
+
+
+

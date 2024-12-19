@@ -1,0 +1,13 @@
+// Solicita al usuario el precio de un producto y el porcentaje de IVA. Usa una
+// función flecha para calcular el precio final.
+
+const prompt = require('prompt-sync')();
+
+let precioProducto = parseFloat(prompt("Ingrese el precio del producto: "));
+
+let impuestoIVA = precioProducto*27/100
+
+let precioFinal;
+let funcionCalculo = precioFinal => precioProducto + impuestoIVA;
+
+console.log("El precio final del producto (sumando IVA) es: ",funcionCalculo())

@@ -1,0 +1,14 @@
+const prompt = require('prompt-sync')();
+
+// Tienes una lista de invitados a una fiesta ["Ana", "Juan", "Carlos", "Sofía"].
+// El último invitado no puede asistir. Elimina al último invitado y muestra
+// quién fue eliminado y el estado actualizado de la lista.
+
+let invitadxs = ["Ana", "Juan", "Carlos", "Sofía"];
+
+console.log("La lista de invitadxs antes de la actualización:",invitadxs);
+
+invitadxs.pop();
+
+console.log("La lista de invitadxs después de la actualización:",invitadxs);
+

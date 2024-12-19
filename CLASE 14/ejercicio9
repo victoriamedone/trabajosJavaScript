@@ -1,0 +1,56 @@
+const prompt = require('prompt-sync')();
+
+// En este ejercicio, trabajaremos con una lista de modelos de autos.
+// Implementa una función llamada ultimaAparicionModeloAuto(modelo) que
+// encuentre y muestre la última posición en la lista donde aparece el modelo
+// específico de auto dado por modelo.
+
+
+// Datos Iniciales:
+// ✓ Utiliza un array llamado modelosAutos que contiene varios modelos de
+// autos, algunos repetidos para demostrar la funcionalidad.
+
+let modelosAutos = [
+    "Toyota Corolla",
+    "Honda Civic",
+    "Ford Mustang",
+    "Chevrolet Camaro",
+    "Volkswagen Golf",
+    "Toyota Corolla",
+    "BMW Serie 3",
+    "Toyota Corolla",
+    "Mercedes-Benz Clase C",
+    "Audi A4"
+];
+
+// Funcionalidad:
+// ✓ Implementa la función ultimaAparicionModeloAuto(modelo), que toma
+// modelo como parámetro (un string).
+// ✓ Debes recorrer el array de manera manual para encontrar la última
+// aparición del modelo.
+// ✓ Si el modelo se encuentra en el array, la función debe imprimir por
+// consola la posición (índice + 1) en la que aparece (considerando que la
+// numeración es de 1 a N).
+// ✓ Si el modelo no está en el array, debe imprimir un mensaje indicando que
+// el modelo no está presente.
+
+let buscar = "Ford Ka";
+
+let ultimaAparicionModeloAuto = (modelosAutos, buscar) => {
+    let ultimaPosicion = -1; 
+
+    for (let i = 0; i < modelosAutos.length; i++) {
+        if (modelosAutos[i] === buscar) {
+            ultimaPosicion = i + 1; 
+        }
+    }
+
+    if (ultimaPosicion !== -1) {
+        console.log("El modelo", buscar, "se encuentra por última vez en la posición nro", ultimaPosicion);
+    } else {
+        console.log("El modelo", buscar, "no está presente en el array.");
+    }
+};
+
+ultimaAparicionModeloAuto(modelosAutos, buscar);
+

@@ -1,0 +1,36 @@
+// Ejercicio 7: Libros
+// Define dos objetos libro1 y libro2 con las siguientes propiedades y valores:
+// ✓ título: una cadena con el título del libro.
+// ✓ autor: una cadena con el nombre del autor del libro.
+// ✓ anioPublicacion: un número con el año de publicación del libro.
+// Luego, crea una función llamada mostrarLibro que tome un arreglo de libros
+// como parámetro y muestre por consola la información de cada libro en el
+// formato especificado.
+
+const prompt = require('prompt-sync')();
+
+let libro1 = {
+    titulo: "Los peligros de fumar en la cama",
+    autor: "Mariana Enriquez",
+    anioPublicacion: 2009,
+};
+
+let libro2 ={
+    titulo: "Historias de cronopios y de famas",
+    autor: "Julio Cortázar",
+    anioPublicacion: 1962,
+};
+
+let mostrarLibro = (libro1,libro2) => {
+    let elegirLibro = prompt("Ahora mismo tenemos 2 libros, sobre cual quiere infromación, 1 o 2?");
+
+    if(elegirLibro == 1){
+        console.log("El primer libro es",libro1.titulo,"es de",libro1.autor,"y fue publicado en el año",libro1.anioPublicacion);   
+    }else if(elegirLibro == 2){
+        console.log("El segundo libro es",libro2.titulo,"es de",libro2.autor,"y fue publicado en el año",libro2.anioPublicacion);   
+    }else{
+        console.log("Por favor ingrese solo 1 o 2");
+    }
+}
+
+mostrarLibro(libro1,libro2);
